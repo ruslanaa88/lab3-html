@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Форма реєстрації</h1>
+    <!-- Форма для збору особистої інформації -->
+    <form action="/submit" method="post">
+        <!-- Секція з особистою інформацією -->
+            <fieldset>
+                <legend>Особиста інформація</legend>
+                <!-- Поле для введення імені -->
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше ім'я">
+                <br>
+                <br>
+                <!-- Поле для введення віку -->
+                <label for="age">Ваш вік:</label>
+                <input type="number" id="age" name="age" placeholder="Ваш вік" required>
+            </fieldset>
+            <br>
+            <br>
+            <!-- Поле для введення паролю -->
+            <label for="password">Ваш пароль:</label>
+            <input type="password" id="password" name="password" required>
+        <!-- Секція з вибором статі -->
+        <section>
+            <h3>Стать</h3>
+            <!-- Поле для вибору чоловічої статі -->
+            <input type="radio" name="gender" value="male"> Чоловіча
+            
+            <!-- Поле для вибору жіночої статі -->
+            <input type="radio" name="gender" value="female"> Жіноча
+        </section>
+        <br>
+            <input type="checkbox" name="remember" id="remember"> 
+            <label for="remember">Запам'ятати мене</label>
+        <br>
+        <!-- Секція з вибором міста -->
+        <section>
+            <h3>Місто</h3>
+            <!-- Випадаючий список для вибору міста -->
+            <select name="city" id="city" required>
+                <option value="">-- Виберіть місто --</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odessa">Одеса</option>
+                <option value="kharkiv">Харків</option>
+            </select>
+        </section>
+        <!-- Секція з полем для введення повідомлення -->
+        <section>
+            <h3>Повідомлення</h3>
+            <!-- Текстове поле для введення повідомлення -->
+            <textarea name="message" id="message" required></textarea>
+        </section>
+        <!-- Кнопка для відправки форми -->
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>
